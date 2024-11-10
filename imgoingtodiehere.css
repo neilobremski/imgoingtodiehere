@@ -1,3 +1,15 @@
+body {
+  visibility: hidden; /* use javascript to show body after style is loaded */
+}
+
+body.loaded {
+  visibility: visible;
+}
+
 img {
+  max-width: 100%;
+}
+
+video {
   max-width: 100%;
 }
