@@ -28,12 +28,17 @@ function make(tag, contents, children, attributes) {
 window.onload = function() {
   const body = document.querySelector("body")
 
+  const headerHtml = `
+  <a href="/">&laquo;</a><br>
+  `
+
   const footerHtml = `
   <hr>
   <copyright><a href="https://imgoingtodiehere.com">imgoingtodiehere.com</a> &copy; 2024++ by Greg Havener and Neil C. Obremski</copyright>
   `
 
   const mainContainer = make("main", {className: "container"}, [
+    make("header", {innerHTML: headerHtml}),
     ...Array.from(body.children),
     make("footer", {innerHTML: footerHtml})
   ])
